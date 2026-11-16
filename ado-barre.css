@@ -1,0 +1,22 @@
+/* Thème Ado : la barre des tâches (fenêtre à part, reçoit ce fichier en plus du style cyber) */
+/* un dégradé bleu nuit vers le noir, un liseré bleu-rouge qui luit en haut */
+html[data-style] body{background:linear-gradient(180deg,#0c1640,#03050b 70%)}
+html[data-style] body::before{height:2px;background:linear-gradient(90deg,#2f6bff,#ff2d55 50%,#2f6bff);box-shadow:0 0 10px rgba(47,107,255,.8)}
+/* le bouton NeoDex : la même écriture que le titre de l'accueil, blanche et grasse au contour bleu nuit, sur un bouton bleu vif */
+html[data-style] #start{clip-path:none;border-radius:8px;padding:0 16px;font:italic 900 15px 'Segoe UI Black','Arial Black',system-ui,sans-serif;letter-spacing:0;color:#fff;
+  -webkit-text-stroke:3px #02061a;paint-order:stroke fill;background:linear-gradient(180deg,#5b8fff,#1739b8);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 0 0 2px #02061a,0 0 12px rgba(47,107,255,.6)}
+html[data-style] #start.front{background:linear-gradient(180deg,#ff6b8a,#c0123a)}
+html[data-style] #start:hover{filter:brightness(1.15) drop-shadow(0 0 6px rgba(77,134,255,.9))}
+/* les applis : arrondies, celle au premier plan éclairée de bleu avec un trait rouge dessous */
+html[data-style] .app{border-radius:8px}
+html[data-style] .app:hover{background:rgba(47,107,255,.2)}
+html[data-style] .app.run::after{background:#9cc4ff;border-radius:2px}
+html[data-style] .app.fg{background:linear-gradient(180deg,rgba(77,134,255,.4),rgba(23,57,184,.15));box-shadow:inset 0 0 0 1px rgba(156,196,255,.5)}
+html[data-style] .app.fg::after{background:linear-gradient(90deg,#2f6bff,#ff2d55);box-shadow:0 0 6px #ff2d55;animation:none}
+/* le nombre de fenêtres : une pastille rouge ronde, lisible */
+html[data-style] .count{top:1px;right:1px;min-width:12px;padding:2px 3px;border-radius:8px;font:bold 9px/1 'Segoe UI',Arial,sans-serif;text-align:center;background:#ff2d55;box-shadow:0 0 0 2px #03050b}
+/* la zone de droite et l'heure */
+html[data-style] #tray{border-radius:8px;background:rgba(3,5,11,.6);box-shadow:inset 0 0 0 1px rgba(156,196,255,.3)}
+html[data-style] .tbtn{color:#9cc4ff;border-radius:6px} html[data-style] .tbtn:hover{background:rgba(47,107,255,.25)}
+html[data-style] #clock b{font:900 14px 'Segoe UI Black','Arial Black',sans-serif;color:#fff;text-shadow:0 0 8px rgba(47,107,255,.9)} html[data-style] #clock small{color:#9cc4ff}
+html[data-style] .sep{background:linear-gradient(transparent,#2f6bff,transparent)}
