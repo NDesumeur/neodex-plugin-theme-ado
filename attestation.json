@@ -1,0 +1,9 @@
+{
+  "pluginId": "neodex.themeado",
+  "repo": "NDesumeur/neodex-plugin-theme-ado",
+  "version": "1.0.0",
+  "sha256": "13d37bff4d90a3c7123d3c1074dc9ea8894f8193d56a47f0458413ffd9e0e7f5",
+  "approvedAt": "2026-11-16T21:06:34.511Z",
+  "neobase": ">=4.1.0",
+  "signature": "NVEW+EyzBpKGMyw84rPxRXNcFRnOFH8eEw8Ii76vpQolMt7Wmw/E3vi1gVrZD6BuJJfYDizSjBFiJeKkTWHYAw=="
+}
