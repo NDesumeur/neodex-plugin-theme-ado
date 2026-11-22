@@ -1,9 +1,9 @@
 {
   "pluginId": "neodex.themeado",
   "repo": "NDesumeur/neodex-plugin-theme-ado",
-  "version": "1.0.0",
-  "sha256": "13d37bff4d90a3c7123d3c1074dc9ea8894f8193d56a47f0458413ffd9e0e7f5",
-  "approvedAt": "2026-11-16T21:06:34.511Z",
+  "version": "1.0.1",
+  "sha256": "dfc671370eb9fac544e968a64903674cb9e1990ec6dd1e89f1e0e496cba88468",
+  "approvedAt": "2026-11-22T21:42:51.362Z",
   "neobase": ">=4.1.0",
-  "signature": "NVEW+EyzBpKGMyw84rPxRXNcFRnOFH8eEw8Ii76vpQolMt7Wmw/E3vi1gVrZD6BuJJfYDizSjBFiJeKkTWHYAw=="
+  "signature": "+o5M+/o2yP41vZjqy1WyV/AQzmNcGdh+NFckWPUCRkn4ohg0pJJWS4vxo3hkDLLKhIzFkS6qShzB4OnoAObbCw=="
 }
