@@ -1,6 +1,6 @@
 # Thème Ado pour NeoDex
 
-Un thème bleu et noir en hommage à Ado : son illustration en fond, des roses bleues dans les coins avec des autocollants gyaru qui scintillent, Abo (la peluche du mème « I am Ado ») qui se promène derrière les cadres et dépasse de chacun, la liste de ses chansons qui défile en bas et un titre NeoDex gras et lisible, repris sur la barre des tâches. Thème de fan, sans lien officiel avec l'artiste.
+Un thème bleu et noir en hommage à Ado : son illustration en fond, des roses bleues dans les coins avec des autocollants gyaru qui scintillent, Abo (la peluche du mème « I am Ado ») assis au bord de chaque cadre et qui se promène dans la barre des tâches, la liste de ses chansons qui défile en bas et un titre NeoDex gras et lisible, repris sur la barre des tâches. Thème de fan, sans lien officiel avec l'artiste.
 
 S'installe depuis NeoStore, catégorie Thèmes (NeoDex 3.2.2 et plus), puis se choisit dans Paramètres > Apparence. Tout est dans `ado.css` : rien ne vient d'Internet.
 

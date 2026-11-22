@@ -2,7 +2,7 @@
 # mises dans le fichier, rien ne vient d'Internet.
 #  - le fond : l'illustration, assombrie sur les bords pour que les cadres restent lisibles ;
 #  - les roses bleues dans les coins, tournées vers le milieu, avec des autocollants gyaru qui scintillent (cœurs, strass, « GYARU » en rouge, « Ado♡ ») ;
-#  - Abo (la peluche du mème « I am Ado ») qui se balade derrière les cadres et dit « I am Abo », et qui dépasse en bas à droite de chaque cadre ;
+#  - Abo (la peluche du mème « I am Ado ») assis en bas à droite de chaque cadre ; il se promène dans la barre des tâches (ado-barre.css, entre /*abo*/ et /*/abo*/) ;
 #  - en bas, la liste de ses chansons qui défile comme l'écran d'une scène (les titres seulement).
 # La police : Rampart One (fonts/RampartOne.woff2, licence SIL OFL 1.1), elle aussi rangée dans ado.css (entre /*font*/ et /*/font*/).
 # python tools/decor.py   (depuis le dossier du plugin)
@@ -84,14 +84,6 @@ def css():
         'filter:drop-shadow(0 0 10px rgba(47,107,255,.45));animation:adoTicker 70s linear infinite}'
         '@keyframes adoTicker{from{background-position:0 0,100% 0,0 calc(100% - 34px),100% calc(100% - 34px),-46px -46px,calc(100% + 46px) -46px,-46px calc(100% + 12px),calc(100% + 46px) calc(100% + 12px),0 calc(100% - 33px),0 100%,0 calc(100% - 1px)}'
         f'to{{background-position:0 0,100% 0,0 calc(100% - 34px),100% calc(100% - 34px),-46px -46px,calc(100% + 46px) -46px,-46px calc(100% + 12px),calc(100% + 46px) calc(100% + 12px),0 calc(100% - 33px),0 100%,-{TICK_W}px calc(100% - 1px)}}}}'
-        # Abo qui se promène derrière les cadres, en se dandinant ; sa bulle « I am Abo » apparaît de temps en temps
-        'html[data-style]::before{content:"";position:fixed;left:0;bottom:40px;width:150px;height:170px;z-index:1;pointer-events:none;'
-        f'background:{uri(BUBBLE)} 100% 0/0 0 no-repeat,var(--abo) 0 100%/96px auto no-repeat;'
-        'filter:drop-shadow(0 6px 8px rgba(0,0,0,.6));transform-origin:48px 100%;'
-        'animation:adoWalk 46s linear infinite,adoWaddle .9s ease-in-out infinite alternate,adoTalk 46s steps(1) infinite}'
-        '@keyframes adoWalk{from{translate:-160px 0}to{translate:calc(100vw + 20px) 0}}'
-        '@keyframes adoWaddle{from{rotate:-6deg}to{rotate:6deg}}'
-        '@keyframes adoTalk{0%,24%,40%,70%,100%{background-size:0 0,96px auto}25%,39%,71%,84%{background-size:110px auto,96px auto}}'
         # Abo assis en bas à droite de chaque cadre
         'html[data-style] .panel{position:relative}'
         'html[data-style] .panel::after{content:"";position:absolute;right:10px;bottom:-14px;width:46px;height:56px;background:var(--abo) 50% 100%/contain no-repeat;'
@@ -99,7 +91,19 @@ def css():
         'html[data-style] .panel:hover::after{transform:rotate(-8deg) scale(1.12)}'
     )
 
+# Abo qui se promène dans la barre des tâches, en se dandinant : il va jusqu'au bout, se retourne et revient ; les clics passent à travers lui
+def bar_css():
+    abo = b64('abo.png', 'image/png')
+    return ('html[data-style]::after{content:"";position:fixed;left:0;bottom:1px;width:28px;height:34px;z-index:5;pointer-events:none;'
+            f'background:{abo} 50% 100%/contain no-repeat;filter:drop-shadow(0 2px 3px rgba(0,0,0,.7));transform-origin:50% 100%;'
+            'animation:adoBarWalk 70s linear infinite,adoBarWaddle .7s ease-in-out infinite alternate}'
+            '@keyframes adoBarWalk{0%{translate:-30px 0;scale:1 1}49.9%{translate:calc(100vw + 2px) 0;scale:1 1}50%{translate:calc(100vw + 2px) 0;scale:-1 1}99.9%{translate:-30px 0;scale:-1 1}100%{translate:-30px 0;scale:1 1}}'
+            '@keyframes adoBarWaddle{from{rotate:-7deg}to{rotate:7deg}}')
+
 if __name__ == '__main__':
+    b = open('ado-barre.css', encoding='utf-8').read()
+    b = re.sub(r'\n?/\*abo\*/.*?/\*/abo\*/', '', b, flags=re.S).rstrip('\n') + '\n/*abo*/' + bar_css() + '/*/abo*/\n'
+    open('ado-barre.css', 'w', encoding='utf-8', newline='\n').write(b)
     c = open('ado.css', encoding='utf-8').read()
     c = re.sub(r'/\*decor\*/.*?/\*/decor\*/', lambda m: '/*decor*/' + css() + '/*/decor*/', c, flags=re.S)
     # la police Rampart One (Fontworks, licence SIL OFL 1.1), réduite aux lettres latines, accents, chiffres et cœurs

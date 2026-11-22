@@ -1,9 +1,9 @@
 {
   "id": "neodex.themeado",
   "name": "Thème Ado",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "NDesumeur",
-  "description": "Un thème bleu et noir en hommage à Ado : son illustration en fond, des roses bleues dans les coins avec des autocollants gyaru qui scintillent, Abo (la peluche du mème « I am Ado ») qui se promène derrière les cadres et dépasse de chacun, la liste de ses chansons qui défile en bas et un titre NeoDex gras et lisible, repris sur la barre des tâches. Thème de fan, sans lien officiel avec l'artiste.",
+  "description": "Un thème bleu et noir en hommage à Ado : son illustration en fond, des roses bleues dans les coins avec des autocollants gyaru qui scintillent, Abo (la peluche du mème « I am Ado ») assis au bord de chaque cadre et qui se promène dans la barre des tâches, la liste de ses chansons qui défile en bas et un titre NeoDex gras et lisible, repris sur la barre des tâches. Thème de fan, sans lien officiel avec l'artiste.",
   "icon": "icon.png",
   "neobase": ">=4.1.0",
   "neodex": ">=3.2.2",
@@ -27,7 +27,7 @@
       "third": "#e6edff",
       "style": "cyber",
       "css": "ado.css",
-      "about": "Bleu et noir : son illustration en fond, roses bleues et autocollants gyaru, Abo qui se promène.",
+      "about": "Bleu et noir : son illustration en fond, roses bleues et autocollants gyaru, Abo dans la barre des tâches.",
       "taskbar": "ado-barre.css"
     }
   ]
